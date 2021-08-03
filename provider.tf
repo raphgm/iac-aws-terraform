@@ -6,19 +6,17 @@ terraform {
             source  = "hashicorp/aws"
             version = "~> 3.21"
         }
-    
     }
 
     backend "s3" {
         bucket = ""
         key = "value"
-        region = "us-east-1"
-      
+        region = "us-east-1" 
     }
 
     experiments = [ example]
 
     provider_meta "required_providers" {
-        hashicorp = ""      
+        hashicorp = "3.10"      
     }
 }
